@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		  .Marquee-box {
+     position: relative;
+     display: inline-block;
+     width: 500px;
+     height: 80px;
+     -webkit-perspective: 500px;
+             perspective: 500px;
+     top: auto;
+     left: auto;
+     z-index: 100;
+  }
+  .MyMarquee {
+     text-align: center;
+     font-weight: bold;
+     width: 100%;
+     height: 100%;
+     font-size: 33px;
+     border: 1px solid #8C8C8C;
+     color: #FFFFFF;
+     font-family: Arial, Helvetica, sans-serif;
+     vertical-align: middle;
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+     background-color: #FF0000;
+
+     text-shadow: 1px 1px 0px #A3A3A3;
+     box-shadow: 5px 5px 2px 0px #A3A3A3;
+     transform: rotateX(50deg);
+     transform-origin: 50% 50% 0px;
+  }
+  .MyMarquee a, .MyMarquee img {
+     display: inline-block;
+     text-decoration: underline;
+     color: #FFFFFF;
+     vertical-align: middle;
+  }
+ .css-3d-text {
+    font-size: 86px;
+    color: #ff2007;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(250,27,2),
+                 -1px -1px 0 rgb(245,22,0),
+                 -2px -2px 0 rgb(240,17,0),
+                 -3px -3px 0 rgb(234,11,0),
+                 -4px -4px 0 rgb(229,6,0),
+                 -5px -5px 0 rgb(224,1,0),
+                 -6px -6px 0 rgb(219,-4,0),
+                 -7px -7px 0 rgb(214,-9,0),
+                 -8px -8px 0 rgb(209,-14,0),
+                 -9px -9px 0 rgb(203,-20,0),
+                 -10px -10px 0 rgb(198,-25,0),
+                 -11px -11px 0 rgb(193,-30,0),
+                 -12px -12px  0 rgb(188,-35,0),
+                 -13px -13px 12px rgba(0,0,0,0.6),
+                 -13px -13px 1px rgba(0,0,0,0.5),
+                 0px 0px 12px rgba(0,0,0,.2);
+ }
+
+	</style>
+</head>
+<body>
+
+	 <div class="Marquee-box">
+   <marquee class="MyMarquee" id="my_marquee" direction="up" behavior="2" scrollamount="4" onmouseover="this.stop()" onmouseout="this.start()">
+     <div>PRAJAPATI</div>
+     <div><a href="/html/marquee-generator">KEVAL</a></div>
+   </marquee>
+ </div>
+
+<div class="css-3d-text">KEVAL</div>
+
+<div class="col-17">
+	<input class="textbox-17" type="text" placeholder="First Name">
+	<span class="focus-border-17"><i></i></span>
+</div>
+<br>
+<br>
+<div class="col-17">
+	<input class="textbox-17" type="text" placeholder="Last Name">
+	<span class="focus-border-17"><i></i></span>
+</div>
+
+<style>
+.col-17 {
+	display: inline-block;
+	position: relative;
+}
+.textbox-17 {
+	padding: 2px 0;
+	font-size: 14px;
+	color: #333;
+	height: 30px;
+	width: 275px;
+	letter-spacing: 1px;
+	border: 1px solid transparent;
+	border-bottom-color: #ccc;
+	transition: 0.4s;
+	outline: none;
+}
+.textbox-17~ .focus-border-17:before,
+.textbox-17 ~ .focus-border-17:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background-color: #3399FF;
+	transition: 0.4s;
+}
+.textbox-17 ~ .focus-border-17:after {
+	top: auto;
+	bottom: 0;
+}
+.textbox-17~ .focus-border-17 i:before,
+.textbox-17 ~ .focus-border-17 i:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #3399FF;
+	transition: 0.6s;
+}
+.textbox-17 ~ .focus-border-17 i:after {
+	left: auto;
+	right: 0;
+}
+.textbox-17:focus ~ .focus-border-17:before,
+.textbox-17:focus ~ .focus-border-17:after {
+	left: 0;
+	width: 100%;
+	transition: 0.4s;
+}
+.textbox-17:focus ~ .focus-border-17 i:before,
+.textbox-17:focus ~ .focus-border-17 i:after {
+	top: 0;
+	height: 100%;
+	transition: 0.6s;
+}
+</style>
+
+<div class="fx-block">
+	<div id="toggle">
+		<div>
+			<input type="checkbox" id="toggles">
+			<div data-unchecked="On" data-checked="Off">
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.center-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	/****** center box
+	width: 300px;
+	height: 300px;
+	border: solid 1px #aaa;
+	******/
+}
+body {
+	background: #262626;
+}
+.loader-circle-9 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70px;
+	height: 70px;
+	background: transparent;
+	border: 3px solid #3c3c3c;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 70px;
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #00eaff;
+	text-transform: uppercase;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+.loader-circle-9:before {
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	width: 100%;
+	height: 100%;
+	border: 3px solid transparent;
+	border-top: 3px solid #00eaff;
+	border-right: 3px solid #00eaff;
+	border-radius: 50%;
+	animation: animateC 2s linear infinite;
+}
+.loader-circle-9 span {
+	display: block;
+	position: absolute;
+	top: calc(50% - 2px);
+	left: 50%;
+	width: 50%;
+	height: 4px;
+	background: transparent;
+	transform-origin: left;
+	animation: animate 2s linear infinite;
+}
+.loader-circle-9 span:before {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #00eaff;
+	top: -6px;
+	right: -8px;
+	box-shadow: 0 0 20px #00eaff;
+}
+@keyframes animateC {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes animate {
+	0% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(405deg);
+	}
+}
+#toggle > div {
+	position: relative;
+	padding: 10px;
+	width: 130px;
+	height: 55px;
+	border-radius: 50px;
+	box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .5), 0px 1px 1px 0 rgba(255, 255, 255, 1);
+	background: rgb(189, 191, 193);
+	background: linear-gradient(to bottom, rgba(189, 191, 193, 1) 0%, rgba(249, 251, 254, 1) 100%);
+}
+#toggle > div > input[type=checkbox] {
+	position: absolute;
+	opacity: 0;
+	top: -3px;
+	left: 17px;
+	width: 130px;
+	height: 55px;
+	z-index: 5;
+}
+#toggle > div > input[type=checkbox] ~ div {
+	width: 130px;
+	height: 55px;
+	border-radius: 50px;
+	border: 1px solid #979797;
+	box-shadow: inset 5px 0 0 0 rgba(0, 0, 0, .1), inset -5px 0 0 0 rgba(0, 0, 0, .1), inset -6px 0 0 0 rgba(255, 255, 255, .5), inset -4px 6px 11px -5px rgba(0, 0, 0, .2), inset 1px 1px 0 0 rgba(255, 255, 255, 1), -6px 4px 11px -7px rgba(0, 0, 0, .5);
+	background: rgb(253, 252, 251);
+	background: linear-gradient(to right, rgba(253, 252, 251, 1) 37%, rgba(229, 229, 229, 1) 61%);
+}
+#toggle > div > input[type=checkbox]:checked ~ div {
+	box-shadow: inset -5px 0 0 0 rgba(0, 0, 0, .1), inset 5px 0 0 0 rgba(0, 0, 0, .1), inset 6px 0 0 0 rgba(255, 255, 255, .5), inset -4px 6px 11px -5px rgba(0, 0, 0, .2), inset 1px 1px 0 0 rgba(255, 255, 255, 1), -6px 4px 11px -7px rgba(0, 0, 0, .5);
+	background: rgb(229, 229, 229);
+	background: linear-gradient(to right, rgba(229, 229, 229, 1) 39%, rgba(253, 252, 251, 1) 63%);
+}
+#toggle > div > input[type=checkbox] ~ div:before {
+	content: attr(data-unchecked);
+	display: block;
+	position: absolute;
+	border-radius: 10px;
+	top: 30px;
+	left: 30px;
+}
+#toggle > div > input[type=checkbox] ~ div:after {
+	content: attr(data-checked);
+	color: #df0000;
+	text-shadow: 0 1px 0 #fff, 0px 0 7px #df0000;
+	filter: dropshadow(color=#df0000, offx=0, offy=0);
+	display: block;
+	position: absolute;
+	border-radius: 10px;
+	top: 30px;
+	left: 100px;
+}
+#toggle > div > input[type=checkbox]:checked ~ div:before {
+	color: #119400;
+	text-shadow: 0 1px 0 #fff, 0px 0 7px #007a08;
+	filter: dropshadow(color=#007a08, offx=0, offy=0);
+}
+#toggle > div > input[type=checkbox]:checked ~ div:after {
+	color: #000;
+	text-shadow: none;
+	filter: dropshadow(none);
+}
+</style>
+<div class="center-body">
+<div class="loader-circle-9">Loading
+  <span></span>
+</div>
+</div>
+</body>
+</html>
